@@ -68,6 +68,6 @@ This repository is implementation of algorithms ranging from most basic to most 
 ## String
 [1. Hashing](string/hashing.cpp)
 
-[2. Rabin_karp](string/kmp.cpp)
+[2. Rabin_karp](string/rabin_karp.cpp)
 
-[3. KMP](string/rabin_karp.cpp)
+[3. KMP](string/kmp.cpp)
