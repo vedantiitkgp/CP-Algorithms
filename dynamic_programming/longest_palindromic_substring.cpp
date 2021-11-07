@@ -14,6 +14,7 @@ typedef vector<vl> vvl;
 typedef vector<bool> vb;
 typedef vector<vb> vvb;
 
+//O(n^2) approach
 void longestPalindromicSubstring(string str)
 {
     int n = str.length();
