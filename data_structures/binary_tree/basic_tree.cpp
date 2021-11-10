@@ -16,6 +16,7 @@ struct Node
     }
 };
 
+//Inorder traversal of binary tree
 void printNodes(struct Node *node)
 {
     if (!node)

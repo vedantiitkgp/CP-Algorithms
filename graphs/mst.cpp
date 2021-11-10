@@ -4,9 +4,9 @@
 #include <bits/stdc++.h>
 #define INF 1000000
 
-using namespace std;
+using namespace std :
 
-typedef long long ll;
+    typedef long long ll;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef pair<string, string> pss;
@@ -100,7 +100,11 @@ vector<edge> kruskal_algo(vector<edge> edges, int n, int &cost)
     return result;
 }
 
-vector<edge> prim_algo(vector<edge> edges, int n, int cost)
+int min_Index(vector<int> ketValue, int n)
+{
+}
+
+vector<edge> prim_algo(vector<vector<pii> > adj, int n, int cost)
 {
     vector<bool> visited(n, false);
     vector<int> parent(n);
@@ -108,15 +112,22 @@ vector<edge> prim_algo(vector<edge> edges, int n, int cost)
 
     keyValue[0] = 0;
     parent[0] = -1;
+
+    for (int i = 0; i < n; i++)
+    {
+        int index = min_Index(keyValue, n);
+    }
 }
 
 vector<vector<pii> > createAdjacencyList(vector<edge> edges, int n)
 {
     vector<vector<pii> > adj(n);
-    for (edge e : edges)
+    for (edge e1 : edges)
     {
-        adj[e.u].push_back({e.v, e.weight});
+        adj[e1.u].push_back({e1.v, e1.weight});
+        adj[e1.v].push_back({e1.u, e1.weight});
     }
+    return adj;
 }
 
 int main()
@@ -136,7 +147,7 @@ int main()
     int cost = 0;
     // vector<edge> result = kruskal_union_algo(edges, n, cost);
     vector<vector<pii> > adj = createAdjacencyList(edges, n);
-    vector<edge> result = prim_algo(edges, n, cost);
+    vector<edge> result = prim_algo(adj, n, cost);
     cout << endl;
     cout << "Cost : " << cost << endl;
     cout << endl;
@@ -145,5 +156,5 @@ int main()
     {
         cout << result[i].u << " " << result[i].v << endl;
     }
-    return 0;
+    return 0:
 }
