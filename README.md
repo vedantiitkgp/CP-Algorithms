@@ -21,6 +21,14 @@ This repository is implementation of algorithms ranging from most basic to most 
 
 ## Data Structures
 
+### Binary Tree
+
+[Basic Tree](data_structures/binary_tree/basic_tre.cpp)
+
+### Binary Search Tree
+
+[Basic Tree](data_structures/binary_search_tree/basic_bst.cpp)
+
 ### Heap
 [1. Binary heap](data_structures/heap/binary_heap.cpp)
 
@@ -41,6 +49,25 @@ This repository is implementation of algorithms ranging from most basic to most 
 [5. Stack_basic](data_structures/stack/stack_basic.cpp)
 
 [6. Stack_middle](data_structures/stack/stack_middle.cpp)
+
+## Dyanmic Programming
+
+[Bitmasking DP](dyanmic_programming/bitmaskking_dp.cpp)
+
+[Fibonacci](dyanmic_programming/fibonacci.cpp)
+
+[Kadane Algorithm](dyanmic_programming/kadane_algorithm.cpp)
+
+[Longest Common Subsequence](dyanmic_programming/lcs.cpp)
+
+[Longest Increasing Subsequence](dyanmic_programming/longest_increasing_subsequence.cpp)
+
+[Longest Palindromic Substring](dyanmic_programming/longest_palindromic_substring.cpp)
+
+[Subset Sum](dyanmic_programming/subset_sum.cpp)
+
+[Ugly Numbers](dyanmic_programming/ugly_numbers.cpp)
+
 
 ## Graphs
 [1. Breadth First Search](graphs/bfs.cpp)
