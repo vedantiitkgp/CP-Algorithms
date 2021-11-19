@@ -1,4 +1,6 @@
 # CP-Algorithms
+![MIT License](https://img.shields.io/apm/l/vim-mode?style=for-the-badge)
+
 This repository is implementation of algorithms ranging from most basic to most advanced. Starting the intro for Competitive programming 
 
 # Algorithms
