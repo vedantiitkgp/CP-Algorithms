@@ -52,6 +52,8 @@ This repository is implementation of algorithms ranging from most basic to most 
 
 [6. Stack_middle](data_structures/stack/stack_middle.cpp)
 
+[7. Largest Rectangle Histogram](data_structures/stack/largest_rectangle_histogram.cpp)
+
 ## Dyanmic Programming
 
 [Bitmasking DP](dyanmic_programming/bitmaskking_dp.cpp)
