@@ -6,7 +6,7 @@ This repository is implementation of algorithms ranging from most basic to most 
 # Algorithms
 
 ## Algebra
-[1. Binary Exponentiation](Alegbra/binary_exponentiation.cpp)
+[1. Binary Exponentiation](Algebra/binary_exponentiation.cpp)
 
 [2. Euclid Algorithm](Algebra/euclid_algorithm.cpp)
 
