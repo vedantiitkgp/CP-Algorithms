@@ -1,5 +1,10 @@
 // https://cp-algorithms.com/graph/strongly-connected-components.html
 
+/* Algorithms -
+- Konsaraju's Algorithm
+- Tarjan's Algorithm
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -14,6 +19,7 @@ typedef vector<pii> vii;
 typedef vector<ll> vl;
 typedef vector<vl> vvl;
 typedef vector<bool> vb;
+typedef stack<int> st;
 
 void dfs(vvi adj,int u,vi &result,vb &visited)
 {
@@ -73,7 +79,8 @@ void print_scc(vvi ans)
     }
 }
 
-void find_scc(vvi adj,int n)
+// Kosaraju's Algorithm
+void find_kosaraju_scc(vvi adj,int n)
 {
     vi top_sort = topological_sort(adj,n);
     vvi adjT = transpose(adj,n);
@@ -84,6 +91,55 @@ void find_scc(vvi adj,int n)
         vi temp;
         if(!visited[top_sort[i]]) dfs_transpose(adjT,top_sort[i],temp,visited);
         if(temp.size()>0)ans.push_back(temp);
+    }
+    print_scc(ans);
+}
+
+
+void find_strongly_connected(vvi &adj, int n, int node,  vi &index, vi &low_index,  vb &on_stack, st &node_stack, int &current_index, vvi &ans){
+    index[node] = current_index;
+    low_index[node] = current_index;
+    current_index++;
+    node_stack.push(node);
+    on_stack[node] = true;
+
+    for(auto neighbor : adj[node]){
+        if(index[neighbor] == -1 ){
+            find_strongly_connected(adj, n, neighbor, index, low_index, on_stack, node_stack, current_index, ans);
+            low_index[node] = min(low_index[node], low_index[neighbor]);
+        }
+        else if(on_stack[neighbor]){
+            low_index[node] = min(low_index[node], index[neighbor]);
+        }
+    }
+
+    if(low_index[node] == index[node]){
+        vi temp;
+        do{
+            int w = node_stack.top();
+            node_stack.pop();
+            on_stack[w] = false;
+            temp.push_back(w);
+        }
+        while(w != node);
+
+        if(!temp.empty()) ans.push_back(temp);
+    }
+}
+
+// Tarjan's Algorithm
+void find_tarjan_scc(vvi adj, int n){
+    vi index(n+1, -1);
+    vi low_index(n+1, -1);
+    vb on_stack(n+1, false);
+    st node_stack;
+    vvi ans;
+    int current_index = 1;
+
+    for(int i=1; i<=n; i++){
+        if(index[i] == -1){
+            find_strongly_connected(adj, n, i, index, low_index, on_stack, node_stack, current_index, ans);
+        }
     }
     print_scc(ans);
 }
@@ -101,6 +157,7 @@ int main()
         cin>>param1>>param2;
         adj[param1].push_back(param2);
     }
-    find_scc(adj,n);
-    return 0;
+    find_kosaraju_scc(adj,n);
+    // find_tarjan_scc(adj, n);
+   return 0;
 }
