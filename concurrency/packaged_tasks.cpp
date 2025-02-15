@@ -48,7 +48,6 @@ int main(){
     t(6); // Task can be passed around and executed later
     // t2(); Binded execution
 
-
     // int x = t.get_future().get() // To get value
 }
 
