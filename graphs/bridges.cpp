@@ -16,10 +16,6 @@ typedef vector<bool> vb;
 
 //Online Algorithm
 
-
-
-
-
 //Offline Algorithm
 
 void is_bridge(int u,int v)

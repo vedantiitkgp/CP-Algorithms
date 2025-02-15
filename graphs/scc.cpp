@@ -1,4 +1,5 @@
 // https://cp-algorithms.com/graph/strongly-connected-components.html
+// https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm
 
 /* Algorithms -
 - Konsaraju's Algorithm
