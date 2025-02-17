@@ -133,6 +133,9 @@ vector<edge> prim_algo(vector<vector<pii>> &adj, int n, int& cost)
         }
     
         for(pii neighbor : adj[node]){
+            if(neighbor.first == parent){
+                continue;
+            }
             if(!visited[neighbor.first]){
                 pq.push({neighbor.second, neighbor.first, node});
             }
