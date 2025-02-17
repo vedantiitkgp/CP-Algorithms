@@ -1,3 +1,6 @@
+[Some Algos Not Linked and Readme not update Please refer individual Module for more details]
+[Images Also to be updated]
+
 # CP-Algorithms
 ![MIT License](https://img.shields.io/apm/l/vim-mode?style=for-the-badge)
 
