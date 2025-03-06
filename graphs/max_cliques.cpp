@@ -28,7 +28,7 @@ void bronKerboschPivot(unordered_set<int>& R, unordered_set<int>& P, unordered_s
         return;
     }
 
-    // Choose pivot: the vertex with the maximum number of neighbors in P
+    // Choose pivot: the vertex with the maximum number of neighbors or smallest non neighbors in P
     int pivot = *P.begin();
     int maxNbrs = 0;
     for (int v : P) {
@@ -42,7 +42,7 @@ void bronKerboschPivot(unordered_set<int>& R, unordered_set<int>& P, unordered_s
         }
     }
 
-    // Iterate over non-neighbors and self of pivot in P
+    // Iterate over all non-neighbors and self of pivot in P
     unordered_set<int> nonNeighbors;
     for (int v : P) {
         if (graph[pivot].find(v) == graph[pivot].end()) {
